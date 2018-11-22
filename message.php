@@ -23,7 +23,7 @@ if(isset($user) && isset($msg) && isset($dest) && isset($rqno)) {
    $msgnum[0] =(string) ((int) $msgnum[0] + 1);
    file_put_contents("../phpdata/" . $dest. "/messages/number.txt", $msgnum[0]);
 
-   #Makes a new message file in the ender's message folder
+   #Makes a new message file in the sender's message folder
    $username = "../phpdata/" . $user . "/messages" . "/message" . (string) $usernum[0] . ".txt";
    $userfile = fopen($username, "w") or die("Unable to open file!");
    fwrite($userfile, $user . "\n" . $message);
